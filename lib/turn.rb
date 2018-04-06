@@ -10,7 +10,7 @@ def input_to_index(number)
   number.to_i - 1
 end
 
-def move (board, position, xo = "X")
+def move(board, position, xo = "X")
   board[position] = xo
 end
 
@@ -36,7 +36,7 @@ def turn(board)
   index = input_to_index(input)
   if valid_move?(board, index) == false
     turn(board)
-  elsif valid_move?(board, index) == false
-    turn(board)
+  elsif valid_move?(board, index) == true
+    move(board, index, xo = "X")
   end
 end
